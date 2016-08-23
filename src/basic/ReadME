@@ -1,0 +1,2 @@
+算法的一些基本数据结构
+BinarySearch: 二分查找实现 rank(int key,int[] a) 返回找到的key的位置
