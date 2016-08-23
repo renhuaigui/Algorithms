@@ -83,6 +83,7 @@ public class Test04 {
         string[10] = 'p';
         string[11] = ' ';
 
+        
         int length = replaceBlank(string, 12);
         System.out.println(new String(string, 0, length));
     }

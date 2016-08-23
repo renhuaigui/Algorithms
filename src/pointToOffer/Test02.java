@@ -116,7 +116,6 @@ public class Test02 {
                     }
                 }
             }
-
             return instance;
         }
     }

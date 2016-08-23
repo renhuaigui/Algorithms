@@ -60,7 +60,6 @@ public class Test03 {
 		}
 		return false;
 	}
-	
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
