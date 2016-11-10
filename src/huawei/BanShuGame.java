@@ -37,26 +37,26 @@ public class BanShuGame {
 		int n = sc.nextInt();
 		List<Integer> arr = new ArrayList<Integer>();
 		int sum = 0;
-		while(n>0){
-			arr.add(sc.nextInt());	
+		while (n > 0) {
+			arr.add(sc.nextInt());
 			n--;
 		}
-//		if(n==1){
-//			System.out.println(arr.get(0));
-//		}
-//		else {
-			while(arr.size()>1){
-				Collections.sort(arr);
-				int a = arr.get(0);
-				//System.out.println(arr.toString());
-				arr.remove(0);
-				int b = arr.get(0);
-				arr.remove(0);
-				sum = sum+a+b;
-				arr.add(a+b);
-				//System.out.println(arr.toString());
-			}
-			System.out.println(sum);
-//		}
+		// if(n==1){
+		// System.out.println(arr.get(0));
+		// }
+		// else {
+		while (arr.size() > 1) {
+			Collections.sort(arr);
+			int a = arr.get(0);
+			// System.out.println(arr.toString());
+			arr.remove(0);
+			int b = arr.get(0);
+			arr.remove(0);
+			sum = sum + a + b;
+			arr.add(a + b);
+			// System.out.println(arr.toString());
+		}
+		System.out.println(sum);
+		// }
 	}
 }

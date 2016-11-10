@@ -3,6 +3,10 @@ package rhg05.DogCat;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * @author ren
+ *
+ */
 public class DogCat {
 
 	public static class Pet {

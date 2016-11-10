@@ -36,24 +36,19 @@ import java.util.Scanner;
  */
 
 /**
- * 思路：
- * 从右上角开始判断 数字等于查找得数字 ，则返回结果true；
- * 如果大于给定得数字则裁剪当前列，递归查询，或者，列号减1，向左查询判断
- * 如果小于给定得数字则裁剪当前行，递归插询，或者，行号加1 ，向下查询判断
- * 当查询到最左下角都没有找到该数字，则返回false
+ * 思路： 从右上角开始判断 数字等于查找得数字 ，则返回结果true； 如果大于给定得数字则裁剪当前列，递归查询，或者，列号减1，向左查询判断
+ * 如果小于给定得数字则裁剪当前行，递归插询，或者，行号加1 ，向下查询判断 当查询到最左下角都没有找到该数字，则返回false
  */
 
 public class Test03 {
-	public static boolean Find(int [][] a,int k){
-		for (int i = 0; i < a.length; ) {
-			for (int j = a[0].length-1; j >=0; ) {
-				if (a[i][j]==k) {
+	public static boolean Find(int[][] a, int k) {
+		for (int i = 0; i < a.length;) {
+			for (int j = a[0].length - 1; j >= 0;) {
+				if (a[i][j] == k) {
 					return true;
-				}
-				else if(a[i][j]>k){
+				} else if (a[i][j] > k) {
 					j--;
-				}
-				else {
+				} else {
 					i++;
 				}
 			}
@@ -64,19 +59,19 @@ public class Test03 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		while (sc.hasNext()) {
-			int m= sc.nextInt();
-			int n= sc.nextInt();
-			int [][]a= new int [m][n];
+			int m = sc.nextInt();
+			int n = sc.nextInt();
+			int[][] a = new int[m][n];
 			for (int i = 0; i < m; i++) {
 				for (int j = 0; j < n; j++) {
-					a[i][j]= sc.nextInt();
+					a[i][j] = sc.nextInt();
 				}
 			}
 			int k = sc.nextInt();
-			if(Find(a, k))
+			if (Find(a, k))
 				System.out.println("succese");
 			else {
-				
+
 			}
 		}
 		sc.close();

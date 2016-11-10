@@ -11,21 +11,23 @@ package huawei;
 import java.util.Scanner;
 
 /**
-* @ClassName: MultiThread
-* @Description: TODO
-* @author Huaigui
-*/
-public class MultiThread implements Runnable{
+ * @ClassName: MultiThread
+ * @Description: TODO
+ * @author Huaigui
+ */
+public class MultiThread implements Runnable {
 	private String name;
 	private Object prev;
 	private Object self;
 	private int count;
+
 	private MultiThread(String name, Object prev, Object self, int count) {
 		this.name = name;
 		this.prev = prev;
 		this.self = self;
 		this.count = count;
 	}
+
 	@Override
 	public void run() {
 		// int count = 10;
@@ -44,6 +46,7 @@ public class MultiThread implements Runnable{
 			}
 		}
 	}
+
 	public static void main(String[] args) throws Exception {
 		Object a = new Object();
 		Object b = new Object();
@@ -54,7 +57,7 @@ public class MultiThread implements Runnable{
 		MultiThread pb = new MultiThread("B", a, b, count);
 		MultiThread pc = new MultiThread("C", b, c, count);
 		MultiThread pd = new MultiThread("D", c, d, count);
-	         
+
 		new Thread(pa).start();
 		Thread.sleep(100); // 确保按顺序A、B、C执行
 		new Thread(pb).start();
