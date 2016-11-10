@@ -8,7 +8,9 @@
 */
 package classical.LCS;
 
+import java.util.HashMap;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 /**
 * @ClassName: LCS
@@ -18,6 +20,7 @@ import java.util.Scanner;
 */
 public class LCS {
 	public static int[][] LCSLength(String[] a,String[] b){
+		
 		int aLen = a.length;
 		int bLen = b.length;
 		int i,j;
@@ -62,10 +65,15 @@ public class LCS {
 			}
 		
 	}
+
 	public static void main(String[] args) {
+
 		Scanner sc = new Scanner(System.in);
 		String []str1 = sc.nextLine().split(" ");
 		String []str2 = sc.nextLine().split(" ");
+		//
+		//
+
 		int [][]b  = LCSLength(str1, str2);
 		for (int i = 0; i < b.length; i++) {
 			for (int j = 0; j < b[0].length; j++) {

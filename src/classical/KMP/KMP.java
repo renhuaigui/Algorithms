@@ -8,6 +8,7 @@
 */
 package classical.KMP;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -35,6 +36,7 @@ public class KMP {
 			}
 			next[i]=j;
 		}
+		System.out.println("next: "+ Arrays.toString(next));
 		return next;
 	}
 	public static int kmp(char []str1, char []str2){
@@ -83,6 +85,7 @@ public class KMP {
                 j = next[j];  
             }  
         }  
+        System.out.println("next: "+ Arrays.toString(next));
         return next;  
     } 
 	
@@ -96,6 +99,9 @@ public class KMP {
      * @return 若匹配成功，返回下标，否则返回-1 
      */  
     public static int KMP_Index(char[] s, char[] t) {  
+    	if(s==null||t==null){
+    		return -1;
+    	}
         int[] next = next(t);  
         int i = 0;  
         int j = 0;  
@@ -117,9 +123,14 @@ public class KMP {
     
 	public static void main(String [] args){
 		Scanner sc = new Scanner(System.in);
-		String s1 = sc.nextLine();
-		String s2 = sc.nextLine();
-		int index =kmp(s1.toCharArray(),s2.toCharArray());
-		System.out.println(index);
+		while(sc.hasNext()){
+			String s1 = sc.nextLine();
+			String s2 = sc.nextLine();
+			int index =kmp(s1.toCharArray(),s2.toCharArray());
+			int index1 = KMP_Index(s1.toCharArray(),s2.toCharArray());
+			System.out.println(index);
+			System.out.println(index1);
+		}
+		sc.close();
 	}
 }

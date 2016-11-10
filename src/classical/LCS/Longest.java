@@ -11,8 +11,8 @@ package classical.LCS;
 public class Longest {
     public static void main(String[] args) {
             // TODO Auto-generated method stub
-            String str1 = "cnblogstss";
-            String str2 = "bbbbelongstst";
+            String str1 = "abcdef";
+            String str2 = "gcdemf";
             int[][] re = longestCommonSubsequence(str1, str2);
             for (int i = 0; i <= str1.length(); i++) {
                     for (int j = 0; j <= str2.length(); j++) {

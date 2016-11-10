@@ -33,8 +33,8 @@ public class LargeNumberAdd {
 			for (int i = 0; i < m; i++) {
 				temp =0;
 				if(j<n)
-					temp = temp+StrB[j]-'0';
-				temp += StrA[i]-'0' +oldTemp;
+					temp = temp+StrB[n-j-1]-'0';
+				temp += StrA[m-i-1]-'0' +oldTemp;
 				result = temp%10 +result;
 				oldTemp = temp/10;
 				j++;

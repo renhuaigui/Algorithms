@@ -38,7 +38,7 @@ import java.util.Scanner;
 0.0
 * @author Huaigui
 */
-public class jifujunzheng {
+public class Jifujunzheng {
 	public static void main(String []args){
 		Scanner sc = new Scanner(System.in);
 		List<Integer> intArr = new ArrayList<Integer>();

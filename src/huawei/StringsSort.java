@@ -8,7 +8,7 @@
 */
 package huawei;
 
-import java.util.*;
+import java.util.Scanner;
 
 /**
  * @ClassName: StringsSort
@@ -40,10 +40,13 @@ public class StringsSort {
         int n = 0;
         StringBuilder builder = new StringBuilder();
         StringBuilder result = new StringBuilder();
+        //先对字母排序
+        //共有26个字母所以最外层的循环是26，每次循环从字符串中只选择一个字母到队列中，
+        //这样经过26次循环字符串中a-z就按顺序入队列了，再从头到尾输出即可了。
         for (int i = 0; i < 26; i++){
             for (int j = 0; j < str.length(); j++){
                 int tmpChar = (int)str.charAt(j);
-                if (tmpChar == 65 + i || tmpChar == 97 + i)
+                if (tmpChar == 'a' + i || tmpChar == 'A' + i)
                     builder.append(str.charAt(j));
             }
         }
@@ -63,7 +66,8 @@ public class StringsSort {
     public static boolean isLetter(char ch){
         if (ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z')
             return true;
-        else return false;
+        else 
+        	return false;
     }
      
     public static void main(String[] args){
